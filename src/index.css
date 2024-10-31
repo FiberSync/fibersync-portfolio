@@ -1,0 +1,9 @@
+
+@import url(./style.css);
+
+@import url(./menu.css);
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
