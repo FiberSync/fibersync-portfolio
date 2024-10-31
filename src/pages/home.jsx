@@ -30,10 +30,11 @@ const Home = () => {
           btndisabled/>
           <Service/>
 
-          <ContentRight title={`Securing SCM with Blockchain`}
-          descOne={`FiberSync leverages blockchain technology to provide a highly secure and transparent solution for supply chain management. Each transaction is recorded and protected from unauthorized access, ensuring data integrity across every process.`}
-          desctwo={`With FiberSync, you gain a comprehensive view of each stage of production, from inventory and spinning to weaving and dyeing. The blockchain-powered system allows you to trace each fiber, guaranteeing complete visibility.`}
-          btndisabled
+          <ContentRight 
+            title={`Enhancing Traceability in Textile Supply Chains`} 
+            descOne={`FiberSync revolutionizes traceability in the textile industry, allowing businesses to track every fiber and fabric through each stage of the supply chain. With our innovative solution, you can ensure compliance with industry standards and enhance product quality by monitoring the origins and processing of materials.`} 
+            desctwo={`By integrating advanced tracking technologies, FiberSync provides real-time insights into inventory levels and production processes. This transparency not only boosts operational efficiency but also builds consumer trust, as customers can verify the authenticity and sustainability of their products with ease.`} 
+            btndisabled 
           />
           <SlideTicker/>
           <VideoTutorial/>
