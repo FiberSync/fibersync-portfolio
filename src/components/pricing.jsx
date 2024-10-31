@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState,useEffect } from 'react';
+import { Link,useNavigate } from 'react-router-dom';
 import {CircleCheckBig} from "lucide-react";
 import { loadStripe } from "@stripe/stripe-js";
 import Swal from 'sweetalert2';
@@ -9,7 +9,8 @@ import Swal from 'sweetalert2';
 
 const Pricing = () => {
   const [activeTab, setActiveTab] = useState(0);
-
+  const [isAuth, setIsAuth] = useState(false);
+  const navigate = useNavigate();
   const handlePayment = async (plan) => {
     const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_KEY);
     try {
@@ -36,7 +37,9 @@ const Pricing = () => {
       });
     }
   };
-
+  useEffect(()=>{
+    setIsAuth(sessionStorage.getItem('token'));
+  },[]);
   const handleTab = (tabIndex) => {
     setActiveTab(tabIndex);
   };
@@ -129,12 +132,15 @@ const Pricing = () => {
             </ul>
 
             {/* Call-to-Action Button */}
-            <div
-              onClick={()=>plan.title === "Enterprise Plus"?  handlePayment("enterprise"):handlePayment("starter")}
+             <div
+              onClick={()=>isAuth? (plan.title === "Enterprise Plus"?  handlePayment("enterprise"):handlePayment("starter")): navigate("/login")}
               className="mt-auto cursor-pointer inline-block rounded-full border-2 border-black py-4 text-center text white transition-all duration-300 hover:bg-[#37ff14a1] hover:text-white"
             >
               Choose the plan
             </div>
+              
+            
+            
           </li>
         ))}
       </ul>

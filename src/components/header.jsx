@@ -7,6 +7,7 @@ export default function Header({hidden=false}) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isAuthStatus, setAuthStatus] = useState(false);
+  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -110,7 +111,7 @@ export default function Header({hidden=false}) {
             <li className="my-2 cursor-pointer font-spaceGrotesk hover:font-bold text-white"> <Link to="/login">Login</Link>  </li>
             <li className="my-2 cursor-pointer font-spaceGrotesk hover:font-bold text-white"><Link to="/sign">Sign Up</Link> </li>
             <li className="my-2 cursor-pointer font-spaceGrotesk hover:font-bold text-white"><Link to="/plans">Plans</Link> </li>
-            <li className="my-2 badge-outline badge font-spaceGrotesk hover:font-bold text-white">Guest Mode</li>
+           {isAuthStatus? <li className="my-2 badge-outline badge font-spaceGrotesk hover:font-bold text-white">{sessionStorage.getItem("orgName")}</li>: <li className="my-2 badge-outline badge font-spaceGrotesk hover:font-bold text-white">Guest Mode</li>} 
             </ul> 
         </div>
           </div>

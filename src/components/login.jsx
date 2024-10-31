@@ -42,7 +42,7 @@ const Login = () => {
 
       Swal.fire({
         title: "Login Successful!",
-        text: `Welcome back!`,
+        html:`Logged in as <b>${response.data.orgName}</b> !`,
         icon: "success"
       });
 
@@ -51,7 +51,7 @@ const Login = () => {
       sessionStorage.setItem('orgName', response.data.orgName);
 
       // Redirect to dashboard or desired page
-      navigate('/index');
+      navigate('/');
     } catch (error) {
       console.error("Login error:", error);
       Swal.fire({
@@ -65,7 +65,7 @@ const Login = () => {
   return (
     <main className="main-wrapper relative overflow-hidden">
       <section id="login-section">
-        <div className="py-40 pt-36 xl:pb-[200px] xl:pt-[180px]">
+        <div className="py-2 pt-20 xl:pb-[200px] xl:pt-20">
           <div className="mx-auto max-w-[910px] text-center">
            <div className='flex justify-center items-center'><CircleUserRound className='pb-10' width={140} height={140} color='#39ff14'/> <h1 className="mb-[50px] font-spaceGrotesk text-black text-3xl font-bold"> Log In</h1></div>
             <div className="block rounded-lg bg-white px-[30px] py-[50px] text-left shadow-[0_4px_60px_0_rgba(0,0,0,0.1)] sm:px-10">
@@ -89,7 +89,7 @@ const Login = () => {
                       title="Please enter a valid email address, such as example@domain.com"
                       id="login-email"
                       placeholder="example@gmail.com"
-                      className="rounded-[10px] border border-gray-300 bg-white px-6 py-[18px] font-bold text-black outline-none transition-all placeholder:text-slate-500 focus:border-[#FE330A]"
+                      className="rounded-[10px] border border-gray-300 bg-white px-6 py-[18px] font-body text-black outline-none transition-all placeholder:text-slate-500 focus:border-[#FE330A]"
                       required
                     />
                   </div>
@@ -106,7 +106,7 @@ const Login = () => {
                       onChange={handleInput}
                       id="login-password"
                       placeholder="Your password"
-                      className="rounded-[10px] border border-gray-300 bg-white px-6 py-[18px] font-bold text-black outline-none transition-all placeholder:text-slate-500 focus:border-[#FE330A]"
+                      className="rounded-[10px] border border-gray-300 bg-white px-6 py-[18px] font-body text-black outline-none transition-all placeholder:text-slate-500 focus:border-[#FE330A]"
                       required
                     />
                   </div>

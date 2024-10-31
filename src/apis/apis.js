@@ -2,7 +2,7 @@ import axios from 'axios';
 
 async function registerUser(name,email,password) {
     try {
-      const response = await axios.post('http://fiber-sync.vercel.app/users/signup', {
+      const response = await axios.post('https://fiber-sync.vercel.app/users/signup', {
         orgName: name,
         email: email,
         password: password,

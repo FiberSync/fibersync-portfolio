@@ -10,12 +10,12 @@ const LoginPage = () => {
   return (
     <div className='bg-white z-[1]'> 
         <Header hidden={true}/>
-        <hero className='w-full md:h-[140%] '>      
+        <div className='w-full md:h-[140%] '>      
           <main className='w-full h-full bg-white'>
             <Login />
           </main>
          
-        </hero>
+        </div>
         <section>
           
         </section>

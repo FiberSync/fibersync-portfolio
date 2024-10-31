@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { CircleCheckIcon, Circle ,UserRoundPlusIcon } from 'lucide-react';
 import axios from 'axios';
@@ -13,6 +13,7 @@ const Signup = () => {
     confirmPassword: '',
     check: false,
   });
+  const navigate = useNavigate();
 
   const handleInput = (e) => {
     setInput((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -59,6 +60,7 @@ const Signup = () => {
         text: "Thanks for Signing Up!",
         icon: "success"
       });
+      navigate("/login");
     } catch (error) {
       console.error(error);
       Swal.fire({
@@ -98,7 +100,7 @@ const Signup = () => {
                       onChange={handleInput}
                       id="signup-name"
                       placeholder="Adam Smith"
-                      className="rounded-[10px] border border-gray-300 bg-white px-6 py-[18px] font-bold text-black outline-none transition-all placeholder:text-slate-500 focus:border-[#FE330A]"
+                      className="rounded-[10px] border border-gray-300 bg-white px-6 py-[18px] font-body text-black outline-none transition-all placeholder:text-slate-500 focus:border-[#FE330A]"
                       required
                     />
                   </div>
@@ -117,7 +119,7 @@ const Signup = () => {
                       onChange={handleInput}
                       id="signup-email"
                       placeholder="example@gmail.com"
-                      className="rounded-[10px] border border-gray-300 bg-white px-6 py-[18px] font-bold text-black outline-none transition-all placeholder:text-slate-500 focus:border-[#FE330A]"
+                      className="rounded-[10px] border border-gray-300 bg-white px-6 py-[18px] font-body text-black outline-none transition-all placeholder:text-slate-500 focus:border-[#FE330A]"
                       required
                     />
                   </div>
@@ -136,7 +138,7 @@ const Signup = () => {
                       title="Must contain at least one number, one uppercase and lowercase letter, and at least 8 characters"
                       id="signup-password"
                       placeholder="Ex: Password123"
-                      className="rounded-[10px] border border-gray-300 bg-white px-6 py-[18px] font-bold text-black outline-none transition-all placeholder:text-slate-500 focus:border-[#FE330A]"
+                      className="rounded-[10px] border border-gray-300 bg-white px-6 py-[18px] font-body text-black outline-none transition-all placeholder:text-slate-500 focus:border-[#FE330A]"
                       required
                     />
                   </div>
@@ -153,7 +155,7 @@ const Signup = () => {
                       onChange={handleInput}
                       id="signup-confirm-password"
                       placeholder="Confirm your password"
-                      className="rounded-[10px] border border-gray-300 bg-white px-6 py-[18px] font-bold text-black outline-none transition-all placeholder:text-slate-500 focus:border-[#FE330A]"
+                      className="rounded-[10px] border border-gray-300 bg-white px-6 py-[18px] font-body text-black outline-none transition-all placeholder:text-slate-500 focus:border-[#FE330A]"
                       required
                     />
                   </div>
