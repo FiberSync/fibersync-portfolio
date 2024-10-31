@@ -31,7 +31,7 @@ export default function Header({hidden=false}) {
   return (
     <header className={`fixed top-0 left-0 w-full z-50  ${isScrolled ? 'bg-black' : 'bg-transparent'}`}>
       <div className="jos max-w-7xl mx-auto flex items-center justify-between px-4 py-3 lg:px-8">
-      <h2 className='font-poppins font-bold text-colorGreen text-3xl'><Link to='/index'>FiberSync</Link></h2>
+      <h2 className='font-poppins font-bold text-colorGreen text-3xl'><Link to='/'>FiberSync</Link></h2>
         
      
         {/* Navigation */}

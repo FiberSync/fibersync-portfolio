@@ -35,7 +35,7 @@ const Login = () => {
 
     // Send login request
     try {
-      const response = await axios.post('http://localhost:3000/users/login', {
+      const response = await axios.post('https://fiber-sync.vercel.app/users/login', {
         email: input.email,
         password: input.password
       });

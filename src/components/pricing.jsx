@@ -14,7 +14,7 @@ const Pricing = () => {
     const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_KEY);
     try {
 
-      const response = await fetch("http://localhost:3000/payment/paymentSubscription", {
+      const response = await fetch("https://fiber-sync.vercel.app/payment/paymentSubscription", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

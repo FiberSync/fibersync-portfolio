@@ -18,13 +18,12 @@ function App() {
   return (
     <div>
       <Routes>
-      <Route path='/index' element={<Home/>}/>
-        <Route path='/' element={<LoginPage/>}/>
+      <Route path='/' element={<Home/>}/>
+        <Route path='/login' element={<LoginPage/>}/>
         <Route path='/plans' element={<Plans/>}/>
         <Route path='/sucess' element={<PaymentSucess/>}/>
         <Route path='/cancel' element={<PaymentCancel/>}/>
         <Route path='/signup' element={<SignupPage/>}/>
-        <Route path='/login' element={<LoginPage/>}/>
         <Route path='/features_fa' element={<FfieldApp/>}/>
       </Routes>
     </div>
