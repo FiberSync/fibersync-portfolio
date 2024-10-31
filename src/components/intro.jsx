@@ -8,7 +8,7 @@ const Intro = () => {
             Pricing Plan
           </h1>
           {/* Hero Description */}
-          <p className="mx-auto text-white max-w-2xl text-lg leading-relaxed lg:text-lg xl:text-lg font-spaceGrotesk md:font-raleway">
+          <p className="mx-auto px-2 md:px-0 text-center text-white max-w-2xl text-lg leading-relaxed lg:text-lg xl:text-lg font-spaceGrotesk md:font-raleway">
           Explore Subscription Plans and Choose the one that best meets your needs.
           </p>
         </div>

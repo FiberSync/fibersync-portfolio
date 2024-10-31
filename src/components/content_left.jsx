@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import contentImage from '../assets/content1.jfif';
 
-const ContentLeft = () => {
+const ContentLeft = ({img=contentImage, title, descOne , desctwo ,btndisabled=false}) => {
   return (
     <section id="section-content-1" className='bg-white'>
       {/* Section Spacer */}
@@ -15,7 +15,7 @@ const ContentLeft = () => {
             <div className="jos transition-transform duration-700 transform hover:scale-105" data-jos_animation="fade-right">
               <div className="overflow-hidden rounded-lg">
                 <img
-                  src={contentImage}
+                  src={img}
                   alt="Securing networks"
                   width={550}
                   height={550}
@@ -30,26 +30,30 @@ const ContentLeft = () => {
               {/* Title Block */}
               <div className="mb-6">
                 <h2 className="font-spaceGrotesk text-4xl font-medium leading-tight tracking-tight text-black sm:text-[44px] lg:text-[56px] xl:text-[70px]">
-                  Optimized Inventory, Uninterrupted Supply
+                  {title}
                 </h2>
               </div>
               
               {/* Description Blocks */}
               <div>
                 <p className="mb-8 text-lg font-body leading-relaxed text-slate-800 lg:text-[21px]">
-                FiberSync streamlines core processes in your supply chain, including spinning, weaving, dyeing, manufacturing, and distribution .
+                {descOne}
                 </p>
                 <p className="mb-8 text-lg font-body leading-relaxed text-slate-800 lg:text-[21px]">
-                 By automating routine tasks and enhancing communication, our platform drives productivity and minimizes bottlenecks. Provide actionable insights for better resource allocation and demand forecasting.
+                 {desctwo}
                 </p>
                 
                 {/* Call-to-Action Button */}
-                <Link
+                {!btndisabled && (
+                  <Link
                   to="/about"
                   className="inline-block rounded bg-[#39FF14] py-3 px-6 text-base font-bold text-black transition-transform duration-300 ease-in-out hover:bg-green-500"
                 >
                   Explore the Platform
                 </Link>
+                )
+                }
+                
               </div>
             </div>
           </div>

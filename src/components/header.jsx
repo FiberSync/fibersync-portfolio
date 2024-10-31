@@ -40,18 +40,18 @@ export default function Header({hidden=false}) {
             <li className="relative group">
               <Link to="#" className="flex items-center gap-1 hover:text-colorGreen">Features</Link>
               <ul  className="absolute left-0 top-full hidden group-hover:block bg-white text-black shadow-lg mt-2 ">
-                <li><Link to="/index.html" className=" hover:text-colorGreen block px-4 py-2">Inventory Management</Link></li>
+                <li><Link to="/index" className=" hover:text-colorGreen block px-4 py-2">Inventory Management</Link></li>
                 <li><Link to="/features_fa" className=" hover:text-colorGreen block px-4 py-2">Field Agent App</Link></li>
-                <li><Link to="/index-3.html" className=" hover:text-colorGreen block px-4 py-2">home 03</Link></li>
-                <li><Link to="/index-4.html" className=" hover:text-colorGreen block px-4 py-2">home 04</Link></li>
+                <li><Link to="/index-3" className=" hover:text-colorGreen block px-4 py-2">Adming Portal</Link></li>
+                <li><Link to="/index-4" className=" hover:text-colorGreen block px-4 py-2">Blockchain</Link></li>
               </ul>
             </li>
-            <li><Link to="/about.html" className="hover:text-colorGreen">About</Link></li>
+            <li><Link to="/about" className="hover:text-colorGreen">About</Link></li>
             <li className="relative group">
               <Link to="#" className=" hover:text-colorGreen flex items-center gap-1">Services</Link>
               <ul className="absolute left-0 top-full hidden group-hover:block bg-white text-black shadow-lg mt-2">
-                <li><Link to="/services.html" className=" hover:text-colorGreen block px-4 py-2">Services</Link></li>
-                <li><Link to="/service-details.html" className=" hover:text-colorGreen block px-4 py-2">Service Details</Link></li>
+                <li><Link to="/plans" className=" hover:text-colorGreen block px-4 py-2">Services</Link></li>
+                <li><Link to="/service-details" className=" hover:text-colorGreen block px-4 py-2">Service Details</Link></li>
               </ul>
             </li>
             {/* Additional menu items as needed */}
@@ -104,11 +104,14 @@ export default function Header({hidden=false}) {
           </label>
           <div className="drawer-side">
             <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
-            <ul className="menu bg-base-200 text-base-content min-h-full w-[90vw] p-4">
+            <ul className="menu bg-base-200 text-base-content min-h-full w-[90vw] px-4">
             {/* Sidebar content here */}
-            <li className="my-4 font-spaceGrotesk font-bold text-white">Sidebar Item 1</li>
-            <li>Sidebar Item 2</li>
-            </ul>
+            <li className="my-2 cursor-pointer font-spaceGrotesk hover:font-bold text-white"><Link to="/">Home</Link> </li>
+            <li className="my-2 cursor-pointer font-spaceGrotesk hover:font-bold text-white"> <Link to="/login">Login</Link>  </li>
+            <li className="my-2 cursor-pointer font-spaceGrotesk hover:font-bold text-white"><Link to="/sign">Sign Up</Link> </li>
+            <li className="my-2 cursor-pointer font-spaceGrotesk hover:font-bold text-white"><Link to="/plans">Plans</Link> </li>
+            <li className="my-2 badge-outline badge font-spaceGrotesk hover:font-bold text-white">Guest Mode</li>
+            </ul> 
         </div>
           </div>
         </div>

@@ -12,12 +12,12 @@ const Footer= () => {
             {/* Section Container */}
             <div className='global-container'>
               {/* Footer Widgets Block */}
-              <div className='grid gap-x-10 gap-y-[60px] sm:grid-cols-2 md:grid-cols-4 lg:flex lg:justify-between lg:gap-x-20'>
+              <div className='grid font-body gap-x-10 gap-y-[60px] sm:grid-cols-2 md:grid-cols-4 lg:flex lg:justify-between lg:gap-x-20'>
                 {/* Footer Widget */}
                 <div className='flex flex-col gap-y-6'>
                   {/* Footer Title */}
-                  <h4 className='text-[21px] font-semibold capitalize text-white'>
-                    Primary Pages
+                  <h4 className='text-[21px] font-semibold  capitalize text-white'>
+                    Pages
                   </h4>
                   {/* Footer Title */}
                   {/* Footer Navbar */}
@@ -40,7 +40,7 @@ const Footer= () => {
                     </li>
                     <li>
                       <Link
-                        to='/services'
+                        to='/features_fa'
                         className='transition-all duration-300 ease-linear hover:text-colorGreen'
                       >
                         Services
@@ -48,7 +48,7 @@ const Footer= () => {
                     </li>
                     <li>
                       <Link
-                        to='/pricing'
+                        to='/plans'
                         className='transition-all duration-300 ease-linear hover:text-colorGreen'
                       >
                         Pricing
@@ -66,44 +66,45 @@ const Footer= () => {
                 </div>
                 {/* Footer Widget */}
                 {/* Footer Widget Item */}
-                <div className='flex flex-col gap-y-6'>
+                
+                <div className='hidden md:flex flex-col gap-y-6  md:visible'>
                   {/* Footer Title */}
                   <h4 className='text-[21px] font-semibold capitalize text-white'>
-                    Utility pages
+                  &nbsp;
                   </h4>
                   {/* Footer Title */}
                   {/* Footer Navbar */}
                   <ul className='flex flex-col gap-y-[10px] capitalize'>
                     <li>
                       <Link
-                        to='/signup'
+                        
                         className='transition-all duration-300 ease-linear hover:text-colorGreen'
                       >
-                        Signup
+                         &nbsp;
                       </Link>
                     </li>
                     <li>
                       <Link
-                        to='/login'
+                       
                         className='transition-all duration-300 ease-linear hover:text-colorGreen'
                       >
-                        Login
+                         &nbsp;
                       </Link>
                     </li>
                     <li>
                       <Link
-                        to='/error-404'
+                        
                         className='transition-all duration-300 ease-linear hover:text-colorGreen'
                       >
-                        404 Not Found
+                         &nbsp;
                       </Link>
                     </li>
                     <li>
                       <Link
-                        to='/reset-password'
+                        
                         className='transition-all duration-300 ease-linear hover:text-colorGreen'
                       >
-                        Password Reset
+                       &nbsp;
                       </Link>
                     </li>
                   </ul>
@@ -113,7 +114,7 @@ const Footer= () => {
                 <div className='flex flex-col gap-y-6'>
                   {/* Footer Title */}
                   <h4 className='text-[21px] font-semibold capitalize text-white'>
-                    Technical Resources
+                    Blogs & News
                   </h4>
                   {/* Footer Title */}
                   {/* Footer Navbar */}
@@ -125,7 +126,7 @@ const Footer= () => {
                         to='www.example.com'
                         className='transition-all duration-300 ease-linear hover:text-colorGreen'
                       >
-                        URL Categorization
+                        SCM Blog
                       </Link>
                     </li>
                     <li>
@@ -135,7 +136,7 @@ const Footer= () => {
                         rel='noopener noreferrer'
                         className='transition-all duration-300 ease-linear hover:text-colorGreen'
                       >
-                        Advisories
+                        SCM Blog
                       </Link>
                     </li>
                     <li>
@@ -145,7 +146,7 @@ const Footer= () => {
                         to='www.example.com'
                         className='transition-all duration-300 ease-linear hover:text-colorGreen'
                       >
-                        Security Check Up
+                       SCM Blog
                       </Link>
                     </li>
                     <li>
@@ -155,7 +156,7 @@ const Footer= () => {
                         to='www.example.com'
                         className='transition-all duration-300 ease-linear hover:text-colorGreen'
                       >
-                        User Center
+                        SCM Blog
                       </Link>
                     </li>
                     <li>
@@ -165,7 +166,7 @@ const Footer= () => {
                         to='www.example.com'
                         className='transition-all duration-300 ease-linear hover:text-colorGreen'
                       >
-                        App Version
+                        SCM Blog
                       </Link>
                     </li>
                   </ul>
