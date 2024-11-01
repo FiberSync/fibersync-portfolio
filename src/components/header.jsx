@@ -14,7 +14,7 @@ export default function Header({hidden=false}) {
       setIsScrolled(window.scrollY > 50);
     };
 
-    if(sessionStorage.getItem("orgName")){
+    if(sessionStorage.getItem("token")){
       setAuthStatus(true);
     }
     window.addEventListener('scroll', handleScroll);

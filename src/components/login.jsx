@@ -40,7 +40,7 @@ const Login = () => {
         email: input.email,
         password: input.password
       });
-      const planRes = await axios.get('http://localhost:3000/get-plan', {
+      const planRes = await axios.get('https://fiber-sync.vercel.app/get-plan', {
         params: {
           email: input.email,
         }

@@ -17,7 +17,7 @@ const Pricing = () => {
     sessionStorage.setItem("plan", plan);
     try {
 
-      const response = await fetch("http://localhost:3000/payment/paymentSubscription", {
+      const response = await fetch("https://fiber-sync.vercel.app/payment/paymentSubscription", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
