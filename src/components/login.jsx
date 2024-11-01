@@ -39,7 +39,12 @@ const Login = () => {
         email: input.email,
         password: input.password
       });
-
+      const planRes = await axios.get('http://localhost:3000/get-plan', {
+        params: {
+          email: input.email,
+        }
+      });
+      sessionStorage.setItem("plan", planRes.data.plan);
       Swal.fire({
         title: "Login Successful!",
         html:`Logged in as <b>${response.data.orgName}</b> !`,
@@ -47,7 +52,15 @@ const Login = () => {
       });
 
       sessionStorage.setItem('token', response.data.token);
-      
+      if (response.data.token) {
+        try {
+          const decoded = jwtDecode(response.data.token);
+          const email = decoded.email; // Access the email field from the decoded token
+          sessionStorage.setItem("User email:",email);
+        } catch (error) {
+          console.error("Failed to decode token:", error);
+        }
+      }
       sessionStorage.setItem('orgName', response.data.orgName);
 
       // Redirect to dashboard or desired page

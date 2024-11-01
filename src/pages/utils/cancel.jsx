@@ -4,8 +4,16 @@ import Header from '../../components/header'
 import Intro from '../../components/intro'
 import Footer from '../../components/footer'
 import  CancelPayment from '../../components/cancelPayment'
+import { useNavigate } from 'react-router-dom'
 
 const PaymentCancel = () => {
+  const navigate = useNavigate();
+    
+    useEffect(() => {
+      setTimeout(() => {
+          navigate(`/`);
+          }, 3000)
+    }, [])
   return (
     <div className='bg-white z-[1]'> 
         <Header/>

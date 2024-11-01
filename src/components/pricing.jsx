@@ -3,7 +3,7 @@ import { Link,useNavigate } from 'react-router-dom';
 import {CircleCheckBig} from "lucide-react";
 import { loadStripe } from "@stripe/stripe-js";
 import Swal from 'sweetalert2';
-
+import { jwtDecode } from "jwt-decode";
 
 
 
@@ -13,17 +13,18 @@ const Pricing = () => {
   const navigate = useNavigate();
   const handlePayment = async (plan) => {
     const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_KEY);
+    const token = sessionStorage.getItem("token");
     try {
 
-      const response = await fetch("https://fiber-sync.vercel.app/payment/paymentSubscription", {
+      const response = await fetch("http://localhost:3000/payment/paymentSubscription", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ plan }),
+        body: JSON.stringify({ plan,token }),
       });
       const data = await response.json();
-      console.log("Payment data:", data);
+      
       
       if (data.url) {
         window.location.href = data.url;
@@ -37,9 +38,12 @@ const Pricing = () => {
       });
     }
   };
+
   useEffect(()=>{
     setIsAuth(sessionStorage.getItem('token'));
+
   },[]);
+
   const handleTab = (tabIndex) => {
     setActiveTab(tabIndex);
   };
@@ -133,7 +137,7 @@ const Pricing = () => {
 
             {/* Call-to-Action Button */}
              <div
-              onClick={()=>isAuth? (plan.title === "Enterprise Plus"?  handlePayment("enterprise"):handlePayment("starter")): navigate("/login")}
+              onClick={()=>isAuth? (plan.title === "Enterprise Plus"?  handlePayment("Enterprise Subscription"):handlePayment("Starter Subscription")): navigate("/login")}
               className="mt-auto cursor-pointer inline-block rounded-full border-2 border-black py-4 text-center text white transition-all duration-300 hover:bg-[#37ff14a1] hover:text-white"
             >
               Choose the plan

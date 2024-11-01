@@ -26,6 +26,7 @@ export default function Header({hidden=false}) {
   const handleLogout = ()=>{
     sessionStorage.removeItem("orgName");
     sessionStorage.removeItem("token");
+    sessionStorage.removeItem("plan");
     setAuthStatus(false);
   }
 
@@ -103,15 +104,16 @@ export default function Header({hidden=false}) {
             <span className={` block w-6 h-0.5 bg-white mb-1.5`}></span>
             <span className={` block w-6 h-0.5 bg-white mb-1.5`}></span>
           </label>
-          <div className="drawer-side">
+          <div className="drawer-side ">
             <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
-            <ul className="menu bg-base-200 text-base-content min-h-full w-[90vw] px-4">
+            <ul className="menu bg-slate-800  text-base-content min-h-full w-[90vw] px-4">
             {/* Sidebar content here */}
             <li className="my-2 cursor-pointer font-spaceGrotesk hover:font-bold text-white"><Link to="/">Home</Link> </li>
             <li className="my-2 cursor-pointer font-spaceGrotesk hover:font-bold text-white"> <Link to="/login">Login</Link>  </li>
             <li className="my-2 cursor-pointer font-spaceGrotesk hover:font-bold text-white"><Link to="/sign">Sign Up</Link> </li>
             <li className="my-2 cursor-pointer font-spaceGrotesk hover:font-bold text-white"><Link to="/plans">Plans</Link> </li>
            {isAuthStatus? <li className="my-2 badge-outline badge font-spaceGrotesk hover:font-bold text-white">{sessionStorage.getItem("orgName")}</li>: <li className="my-2 badge-outline badge font-spaceGrotesk hover:font-bold text-white">Guest Mode</li>} 
+           {isAuthStatus && <li className="my-2 badge-outline badge font-spaceGrotesk hover:font-bold text-colorGreen">Plan: {sessionStorage.getItem("plan")}</li>} 
             </ul> 
         </div>
           </div>

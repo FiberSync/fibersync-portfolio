@@ -4,13 +4,14 @@ import Header from '../../components/header'
 import Intro from '../../components/intro'
 import Footer from '../../components/footer'
 import SuccessfulPayment from '../../components/successfulPayment'
+import { useNavigate } from 'react-router-dom'
 
 const PaymentSucess = () => {
-
+  const navigate = useNavigate();
     
     useEffect(() => {
         setTimeout(() => {
-            window.location.href = '/index'
+            navigate(`/`);
         }, 3000)
     }, [])
 

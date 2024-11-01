@@ -16,6 +16,7 @@
     "dotenv": "^16.4.5",
     "fslightbox-react": "^1.7.6",
     "jos-animation": "^0.9.2",
+    "jwt-decode": "^4.0.0",
     "lucide-react": "^0.453.0",
     "react": "^18.3.1",
     "react-countup-animate": "^1.1.2",

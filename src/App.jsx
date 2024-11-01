@@ -21,7 +21,7 @@ function App() {
       <Route path='/' element={<Home/>}/>
         <Route path='/login' element={<LoginPage/>}/>
         <Route path='/plans' element={<Plans/>}/>
-        <Route path='/sucess' element={<PaymentSucess/>}/>
+        <Route path='/success' element={<PaymentSucess/>}/>
         <Route path='/cancel' element={<PaymentCancel/>}/>
         <Route path='/signup' element={<SignupPage/>}/>
         <Route path='/features_fa' element={<FfieldApp/>}/>
