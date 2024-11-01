@@ -19,6 +19,14 @@ const Plans = () => {
         <hero className='w-full md:h-[140%] '>      
           <main className='w-full h-full bg-white'>
           <Intro/>
+          {sessionStorage.getItem('token') && (
+                        <div className='pt-7 px-7'>
+                        <div className='alert alert-success'>
+                          <p className='font-spaceGrotesk font-bold'>{sessionStorage.getItem("orgName")}</p>
+                          <p className='font-poppins badge badge-outline'>{sessionStorage.getItem("plan")}</p>
+                        </div>
+                      </div>
+          )}
           <Pricing/>
           </main>
           <Footer/>

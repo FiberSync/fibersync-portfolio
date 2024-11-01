@@ -11,7 +11,7 @@ const Service = () => {
     <section id="service-section" className="bg-white py-20 xl:py-20 px-6 md:px-3">
       <div className="container mx-auto">
         <h2 className="text-4xl font-spaceGrotesk font-bold text-center text-black mb-16">
-          Get all the tools to tackle cybersecurity together
+          Get all the tools to manage supply chain
         </h2>
 
         <ul className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">

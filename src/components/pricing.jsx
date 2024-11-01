@@ -78,7 +78,7 @@ const Pricing = () => {
   ];
 
   return (
-    <div className="container mx-auto pt-20 pb-10">
+    <div className="container mx-auto pt-6 pb-7">
       {/* Tab Buttons for Monthly/Annually */}
       <section className='bg-white'>
       <div className="flex justify-center mb-8 ">
