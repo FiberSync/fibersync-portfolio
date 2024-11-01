@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { CircleCheckIcon, Circle, CircleUserRound } from 'lucide-react';
 import axios from 'axios';
+import { jwtDecode } from 'jwt-decode';
 
 const Login = () => {
   const [input, setInput] = useState({
@@ -56,7 +57,7 @@ const Login = () => {
         try {
           const decoded = jwtDecode(response.data.token);
           const email = decoded.email; // Access the email field from the decoded token
-          sessionStorage.setItem("User email:",email);
+          sessionStorage.setItem("email:",email);
         } catch (error) {
           console.error("Failed to decode token:", error);
         }

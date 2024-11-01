@@ -14,6 +14,7 @@ const Pricing = () => {
   const handlePayment = async (plan) => {
     const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_KEY);
     const token = sessionStorage.getItem("token");
+    sessionStorage.setItem("plan", plan);
     try {
 
       const response = await fetch("http://localhost:3000/payment/paymentSubscription", {

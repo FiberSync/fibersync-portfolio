@@ -6,10 +6,11 @@ import Footer from '../../components/footer'
 import  CancelPayment from '../../components/cancelPayment'
 import { useNavigate } from 'react-router-dom'
 
-const PaymentCancel = () => {
+const PaymentCancel =  () => {
   const navigate = useNavigate();
     
     useEffect(() => {
+      sessionStorage.setItem("plan",'Not Subscribed');
       setTimeout(() => {
           navigate(`/`);
           }, 3000)

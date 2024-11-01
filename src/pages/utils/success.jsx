@@ -5,11 +5,16 @@ import Intro from '../../components/intro'
 import Footer from '../../components/footer'
 import SuccessfulPayment from '../../components/successfulPayment'
 import { useNavigate } from 'react-router-dom'
+import axios from 'axios';
 
 const PaymentSucess = () => {
   const navigate = useNavigate();
     
     useEffect(() => {
+        axios.get('http://localhost:3000/sendPurchaseEmail', {params:{
+          token: sessionStorage.getItem("token"),
+          plan: sessionStorage.getItem("plan"),
+        }});
         setTimeout(() => {
             navigate(`/`);
         }, 3000)
