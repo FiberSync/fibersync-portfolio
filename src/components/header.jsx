@@ -43,18 +43,18 @@ export default function Header({hidden=false}) {
     <li className="relative dropdown dropdown-hover">
       <Link to="#" role="button" className="flex items-center gap-1 hover:text-colorGreen">Features</Link>
       <ul  className="dropdown-content bg-white rounded-md text-black shadow-lg mt-2 ">
-      <Link to="/index"> <li  className=" hover:text-colorGreen mx-4 py-2">Inventory Management</li></Link>
+      <Link to="/features_im"> <li  className=" hover:text-colorGreen mx-4 py-2">Inventory Management</li></Link>
       <Link to="/features_fa" > <li className=" hover:text-colorGreen  mx-4 py-2">Field Agent App</li></Link>
-       <Link to="/index-3" > <li className=" hover:text-colorGreen  mx-4 py-2">Adming Portal</li></Link>
-        <Link to="/index-4" ><li className=" hover:text-colorGreen  mx-4 py-2">Blockchain</li></Link>
+       <Link to="/" > <li className=" hover:text-colorGreen  mx-4 py-2">Adming Portal</li></Link>
+        <Link to="/" ><li className=" hover:text-colorGreen  mx-4 py-2">Blockchain</li></Link>
       </ul>
     </li>
-    <li><Link to="/about" className="hover:text-colorGreen">About</Link></li>
+    <li><Link to="/" className="hover:text-colorGreen">About</Link></li>
     <li className="relative dropdown dropdown-hover">
       <Link to="#" role="button" className=" hover:text-colorGreen flex items-center gap-1">Services</Link>
       <ul className="dropdown-content rounded-md bg-white text-black shadow-lg mt-2">
       <Link to="/plans" className=" hover:text-colorGreen block px-4 py-2"><li>Services</li></Link>
-        <Link to="/service-details" className=" hover:text-colorGreen block px-4 py-2"><li>Service Details</li></Link>
+        <Link to="/" className=" hover:text-colorGreen block px-4 py-2"><li>Service Details</li></Link>
       </ul>
     </li>
     {/* Additional menu items as needed */}

@@ -3,7 +3,8 @@ import React from 'react'
 
 const MobileMock = () => {
   return (
-    <div className="mockup-phone border-[#39ff14]">
+
+    <div className="mockup-phone border-[#39ff14] ">
     <div className="camera"></div>
     <div className="display">
     <div className="artboard artboard-demo phone-1 bg-white flex items-center justify-center">
@@ -13,6 +14,7 @@ const MobileMock = () => {
         </div>
     </div>
     </div>
+
   )
 }
 

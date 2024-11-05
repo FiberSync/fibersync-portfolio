@@ -112,65 +112,64 @@ const Footer= () => {
                 {/* Footer Widget Item */}
                 {/* Footer Widget Item */}
                 <div className='flex flex-col gap-y-6'>
-                  {/* Footer Title */}
-                  <h4 className='text-[21px] font-semibold capitalize text-white'>
-                    Blogs & News
-                  </h4>
-                  {/* Footer Title */}
-                  {/* Footer Navbar */}
-                  <ul className='flex flex-col gap-y-[10px] capitalize'>
-                    <li>
-                      <Link
-                        rel='noopener noreferrer'
-                        target='_blank'
-                        to='www.example.com'
-                        className='transition-all duration-300 ease-linear hover:text-colorGreen'
-                      >
-                        SCM Blog
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        target='_blank'
-                        to='www.example.com'
-                        rel='noopener noreferrer'
-                        className='transition-all duration-300 ease-linear hover:text-colorGreen'
-                      >
-                        SCM Blog
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        rel='noopener noreferrer'
-                        target='_blank'
-                        to='www.example.com'
-                        className='transition-all duration-300 ease-linear hover:text-colorGreen'
-                      >
-                       SCM Blog
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        rel='noopener noreferrer'
-                        target='_blank'
-                        to='www.example.com'
-                        className='transition-all duration-300 ease-linear hover:text-colorGreen'
-                      >
-                        SCM Blog
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        rel='noopener noreferrer'
-                        target='_blank'
-                        to='www.example.com'
-                        className='transition-all duration-300 ease-linear hover:text-colorGreen'
-                      >
-                        SCM Blog
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
+  {/* Footer Title */}
+  <h4 className='text-[21px] font-semibold capitalize text-white'>
+    Blogs and News
+  </h4>
+  {/* Footer Navbar */}
+      <ul className='flex flex-col gap-y-[10px] capitalize'>
+        <li>
+          <Link
+            rel='noopener noreferrer'
+            target='_blank'
+            to='https://aptma.org.pk/traceability-essential-for-sustainability/'
+            className='transition-all duration-300 ease-linear hover:text-colorGreen'
+          >
+            APTMA: Traceability Essential for Sustainability
+          </Link>
+        </li>
+        <li>
+          <Link
+            rel='noopener noreferrer'
+            target='_blank'
+            to='https://www.dawn.com/news/1739898'
+            className='transition-all duration-300 ease-linear hover:text-colorGreen'
+          >
+            Merchandise exports shrink 19pc in February
+          </Link>
+        </li>
+        <li>
+          <Link
+            rel='noopener noreferrer'
+            target='_blank'
+            to='https://www.dawn.com/news/1867247'
+            className='transition-all duration-300 ease-linear hover:text-colorGreen'
+          >
+            Textile, leather industries to emerge stronger (Dawn)
+          </Link>
+        </li>
+        <li>
+          <Link
+            rel='noopener noreferrer'
+            target='_blank'
+            to='https://www.fibre2fashion.com/industry-article/textile-engineering/software-solutions-for-textile-industry.asp'
+            className='transition-all duration-300 ease-linear hover:text-colorGreen'
+          >
+            Software Solutions for the Textile Industry (Fibre2Fashion)
+          </Link>
+        </li>
+        <li>
+          <Link
+            rel='noopener noreferrer'
+            target='_blank'
+            to='https://www.dawn.com/news/1662021'
+            className='transition-all duration-300 ease-linear hover:text-colorGreen'
+          >
+            Textile exports projected to cross $20bn target (DAWN)
+          </Link>
+        </li>
+      </ul>
+    </div>
                 {/* Footer Widget Item */}
                 {/* Footer Widget Item */}
                 <div className='flex flex-col gap-y-6'>

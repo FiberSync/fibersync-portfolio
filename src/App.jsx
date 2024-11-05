@@ -10,6 +10,7 @@ import FfieldApp from './pages/features/field_agent';
 import LoginPage from './pages/login';
 import PaymentSucess from './pages/utils/success';
 import PaymentCancel from './pages/utils/cancel';
+import FinventoryMang from './pages/features/inventory_man';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path='/cancel' element={<PaymentCancel/>}/>
         <Route path='/signup' element={<SignupPage/>}/>
         <Route path='/features_fa' element={<FfieldApp/>}/>
+        <Route path='/features_im' element={<FinventoryMang/>}/>
       </Routes>
     </div>
   )

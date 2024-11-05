@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import contentImage from '../assets/content1.jfif';
 
-const ContentLeft = ({img=contentImage, title, descOne , desctwo ,btndisabled=false}) => {
+const ContentLeft = ({img=contentImage, title, descOne , desctwo ,btndisabled=false , component=false}) => {
   return (
     <section id="section-content-1" className='bg-white'>
       {/* Section Spacer */}
@@ -14,13 +14,14 @@ const ContentLeft = ({img=contentImage, title, descOne , desctwo ,btndisabled=fa
             {/* Image Section with Animation */}
             <div className="jos transition-transform duration-700 transform hover:scale-105" data-jos_animation="fade-right">
               <div className="overflow-hidden rounded-lg">
-                <img
+                {!component? (<img
                   src={img}
                   alt="Securing networks"
                   width={550}
                   height={550}
                   className="h-auto w-full"
-                />
+                />) : component}
+                
               </div>
             </div>
             
@@ -39,6 +40,7 @@ const ContentLeft = ({img=contentImage, title, descOne , desctwo ,btndisabled=fa
                 <p className="mb-8 text-lg font-body leading-relaxed text-slate-800 lg:text-[21px]">
                 {descOne}
                 </p>
+                
                 <p className="mb-8 text-lg font-body leading-relaxed text-slate-800 lg:text-[21px]">
                  {desctwo}
                 </p>
