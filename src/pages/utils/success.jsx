@@ -11,7 +11,7 @@ const PaymentSucess = () => {
   const navigate = useNavigate();
     
     useEffect(() => {
-        axios.get('http://localhost:3000/sendPurchaseEmail', {params:{
+        axios.get('https://fiber-sync.vercel.app/sendPurchaseEmail', {params:{
           token: sessionStorage.getItem("token"),
           plan: sessionStorage.getItem("plan"),
         }});
