@@ -12,7 +12,7 @@ const useJOSAnimation = () => {
       animation: 'fade-up',
       timingFunction: 'ease',
       threshold: 0,
-      delay: 0.3,
+      delay: 0.4,
       duration: 0.7,
       scrollDirection: 'down',
       rootMargin: '0% 0% 15% 0%',
