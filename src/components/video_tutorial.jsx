@@ -27,7 +27,7 @@ const VideoTutorial = () => {
               aria-label='Play video'
               onClick={() => setToggler(!toggler)}
             >
-              <div className='relative flex h-[120px] w-[120px] items-center justify-center rounded-full border-[3px] border-colorGreen bg-black text-lg font-bold backdrop-blur-[2px] transition-all duration-300 hover:scale-105'>
+              <div className='relative flex h-[120px] text-slate-300 w-[120px] items-center justify-center rounded-full border-[3px] border-colorGreen bg-black text-lg font-bold backdrop-blur-[2px] transition-all duration-300 hover:scale-105'>
                 Play
                 <div className='absolute -z-[1] h-[110%] w-[110%] animate-[ping_1.5s_ease-in-out_infinite] rounded-full bg-colorGreen opacity-30'></div>
               </div>
