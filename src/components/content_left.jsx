@@ -37,11 +37,11 @@ const ContentLeft = ({img=contentImage, title, descOne , desctwo ,btndisabled=fa
               
               {/* Description Blocks */}
               <div>
-                <p className="mb-8 text-lg font-body leading-relaxed text-slate-800 lg:text-[21px]">
+                <p className="mb-8 text-lg font-body leading-relaxed text-slate-800 lg:text-[17px]">
                 {descOne}
                 </p>
                 
-                <p className="mb-8 text-lg font-body leading-relaxed text-slate-800 lg:text-[21px]">
+                <p className="mb-8 text-lg font-body leading-relaxed text-slate-800 lg:text-[17px]">
                  {desctwo}
                 </p>
                 
