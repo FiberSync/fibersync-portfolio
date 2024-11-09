@@ -35,10 +35,10 @@ const ContentRight = ({
               
               {/* Description Blocks */}
               <div>
-                <p className={`mb-8 text-lg font-body leading-relaxed lg:text-[21px] ${textColor}`}>
+                <p className={`mb-8 text-lg font-body leading-relaxed lg:text-[17px] ${textColor}`}>
                   {descOne}
                 </p>
-                <p className={`mb-8 text-lg font-body leading-relaxed lg:text-[21px] ${textColor}`}>
+                <p className={`mb-8 text-lg font-body leading-relaxed lg:text-[17px] ${textColor}`}>
                   {descTwo}
                 </p>
                 
