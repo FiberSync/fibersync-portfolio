@@ -63,7 +63,7 @@ const InfoBlock = () => {
                 </h2>
               </div>
               <div>
-                <p className='mb-8 text-lg leading-[1.42] last:mb-0 lg:text-[21px] text-slate-700'>
+                <p className='mb-8 text-lg leading-[1.42] last:mb-0 lg:text-[17px] text-justify text-slate-700'>
                   With FiberSync, streamline your supply chain processes and enhance overall efficiency. Our solution enables complete traceability and improves collaboration among stakeholders, ensuring a smoother operation from production to delivery.
                 </p>
               </div>
