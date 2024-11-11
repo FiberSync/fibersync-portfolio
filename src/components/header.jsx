@@ -39,7 +39,7 @@ export default function Header({hidden=false}) {
         {/* Navigation */}
       
         <nav className={`lg:flex items-center hidden lg:static`}>
-  <ul style={{fontWeight: 500}} className="flex flex-col lg:flex-row gap-y-4 lg:gap-x-6 text-white font-body text-base">
+  <ul style={{fontWeight: 500}} className="flex flex-col lg:flex-row gap-y-4 lg:gap-x-6 text-white font-raleway text-base">
     <li className="relative dropdown dropdown-hover">
       <Link to="#" role="button" className="flex items-center gap-1 hover:text-colorGreen">Features</Link>
       <ul  className="dropdown-content bg-white rounded-md text-black shadow-lg mt-2 ">
@@ -66,13 +66,13 @@ export default function Header({hidden=false}) {
           isAuthStatus ? (
             <>
               <div
-                className="hidden border-b-2 border-transparent font-bold text-white transition-all duration-300 hover:border-colorGreen hover:text-colorGreen lg:inline-block"
+                className="hidden border-b-2 border-transparent font-spaceGrotesk font-bold text-white transition-all duration-300 hover:border-colorGreen hover:text-colorGreen lg:inline-block"
               >
                 {sessionStorage.getItem("orgName")}
               </div>
               <div
                 onClick={handleLogout}
-                className="button w-auto hidden h-full cursor-pointer rounded border-none bg-colorGreen py-3 text-base text-black after:border-none after:bg-white lg:inline-block"
+                className="button w-auto hidden h-full font-spaceGrotesk cursor-pointer rounded border-none bg-colorGreen py-3 text-base text-black after:border-none after:bg-white lg:inline-block"
               >
                 Log out
               </div>
@@ -81,13 +81,13 @@ export default function Header({hidden=false}) {
             <>
               <Link
                 to="/signup"
-                className="hidden border-b-2 border-transparent font-bold text-white transition-all duration-300 hover:border-colorGreen hover:text-colorGreen lg:inline-block"
+                className="hidden border-b-2 font-spaceGrotesk border-transparent font-bold text-white transition-all duration-300 hover:border-colorGreen hover:text-colorGreen lg:inline-block"
               >
                 Sign Up
               </Link>
               <Link
                 to="/login"
-                className="button w-auto hidden h-full rounded border-none bg-colorGreen py-3 text-base text-black after:border-none after:bg-white lg:inline-block"
+                className="button w-auto font-spaceGrotesk hidden h-full rounded border-none bg-colorGreen py-3 text-base text-black after:border-none after:bg-white lg:inline-block"
               >
                 Login
               </Link>

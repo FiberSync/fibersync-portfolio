@@ -105,28 +105,28 @@ const Pricing = () => {
             key={index}
             className="group flex flex-col rounded-[10px] bg-black p-8 transition-all duration-300 hover:bg-black"
           >
-            <h3 className="text-2xl font-bold leading-tight text white transition-all duration-300 group-hover:text-white">
+            <h3 className="text-2xl font-bold leading-tight text-slate-300 transition-all duration-300 group-hover:text-white">
               {plan.title}
             </h3>
-            <span className="text-lg text white transition-all duration-300 group-hover:text-white">
+            <span className="text-lg text-slate-300 transition-all duration-300 group-hover:text-white">
               {plan.members}
             </span>
             <div className="my-5 h-px w-full bg-[#DBD6CF]" />
 
-            <h4 className="mb-4 text-5xl font-bold text white transition-all duration-300 group-hover:text-white">
+            <h4 className="mb-4 text-5xl font-bold text-slate-300 transition-all duration-300 group-hover:text-white">
               PKR &nbsp;
               {activeTab === 1? `${parseInt(plan.price.slice(0)) * 4.5}` : plan.price}
               <span className="text-lg font-semibold">{activeTab === 1? "/per year" : plan.period}</span>
             </h4>
 
-            <p className="mb-6 text-lg text white transition-all duration-300 group-hover:text-white">
+            <p className="mb-6 text-lg text-slate-300 transition-all duration-300 group-hover:text-white">
               {plan.description}
             </p>
 
             {/* Plan Features */}
             <ul className="mb-10 flex flex-col gap-y-3">
               {plan.features.map((feature, featureIndex) => (
-                <li key={featureIndex} className="flex items-center gap-x-3 font-bold group-hover:text-white">
+                <li key={featureIndex} className="flex items-center text-slate-300  gap-x-3 font-bold group-hover:text-white">
                   <div className="relative h-6 w-6">
                     <CircleCheckBig width={20} height={20} color='#39ff14'/>
                     
@@ -139,7 +139,7 @@ const Pricing = () => {
             {/* Call-to-Action Button */}
              <div
               onClick={()=>isAuth? (plan.title === "Enterprise Plus"?  handlePayment("Enterprise Subscription"):handlePayment("Starter Subscription")): navigate("/login")}
-              className="mt-auto cursor-pointer inline-block rounded-full border-2 border-black py-4 text-center text white transition-all duration-300 hover:bg-[#37ff14a1] hover:text-white"
+              className="mt-auto cursor-pointer font-poppins font-bold inline-block rounded-full border-2 border-black py-4 text-center text-slate-300 transition-all duration-300 hover:bg-[#37ff14a1] hover:text-white"
             >
               Choose the plan
             </div>
